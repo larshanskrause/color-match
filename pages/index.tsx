@@ -1,9 +1,12 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import type { NextPage } from "next"
+import Game from "../components/Game"
 
 const Home: NextPage = () => {
-    return <div className="w-40 h-40 bg-blue-500"></div>;
-};
+    return (
+        <div>
+            <Game />
+        </div>
+    )
+}
 
-export default Home;
+export default Home
