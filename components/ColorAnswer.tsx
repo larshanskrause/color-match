@@ -2,7 +2,7 @@ import chroma from "chroma-js"
 
 export interface ColorAnswerProps {
     color: chroma
-    answer: (index: number) => void
+    answer: any
 }
 
 const ColorAnswer = (props: ColorAnswerProps) => {

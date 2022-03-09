@@ -1,7 +1,7 @@
 import chroma from "chroma-js"
 
 export interface HistoryProps {
-    history: []
+    history: any[]
 }
 
 const ColorEntry = ({ color, correct = false }) => {

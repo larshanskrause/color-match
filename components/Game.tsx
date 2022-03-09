@@ -2,7 +2,6 @@ import chroma from "chroma-js"
 import { useCallback, useEffect, useRef, useState } from "react"
 import ColorAnswer from "../components/ColorAnswer"
 import History from "../components/History"
-import { useEventListener } from "../hooks/useEventListener"
 import { getDifficultyFactor } from "../utils/difficulty"
 
 const Game = () => {
