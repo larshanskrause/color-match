@@ -1,4 +1,4 @@
 module.exports = {
     outDir: "docs",
-    assetPrefix: "./",
+    assetPrefix: "/color-match/",
 }
