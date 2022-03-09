@@ -1,5 +1,5 @@
 module.exports = {
     outDir: "docs",
-    assetPrefix: "/color-match/",
+    assetPrefix: "/color-match",
     basePath: "/color-match",
 }
