@@ -4,7 +4,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "export": "next build && next expot -o \"./docs\""
   },
   "dependencies": {
     "chroma-js": "^2.4.2",
