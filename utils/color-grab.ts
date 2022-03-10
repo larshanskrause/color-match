@@ -9,14 +9,17 @@ interface Position {
     y: number
 }
 
-export default function colorGrab(imgEl, size: Size, position: Position) {
+export default function colorGrab(
+    imgEl,
+    size: Size,
+    position: Position,
+    grayscale = false
+) {
     var blockSize = 5, // only visit every 5 pixels
         defaultRGB = { r: 0, g: 0, b: 0 }, // for non-supporting envs
         canvas = document.createElement("canvas"),
         context = canvas.getContext && canvas.getContext("2d"),
         data,
-        width,
-        height,
         i = -4,
         length,
         rgb = { r: 0, g: 0, b: 0 },
@@ -29,7 +32,10 @@ export default function colorGrab(imgEl, size: Size, position: Position) {
     canvas.height = imgEl.height
     canvas.width = imgEl.width
 
-    context.drawImage(imgEl, 0, 0, imgEl.height, imgEl.width)
+    if (grayscale) {
+        context.filter = "grayscale(1)"
+    }
+    context.drawImage(imgEl, 0, 0, imgEl.width, imgEl.height)
 
     try {
         data = context.getImageData(
