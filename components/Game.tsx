@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import ColorAnswer from "../components/ColorAnswer"
 import History from "../components/History"
 import { getDifficultyFactor } from "../utils/difficulty"
+import ImageGrab from "./ImageGrab"
 
 const Game = () => {
     const [history, setHistory] = useState([])
@@ -70,7 +71,8 @@ const Game = () => {
     })
 
     return (
-        <div className="p-6">
+        <div className="p-0">
+            <ImageGrab />
             <h1>Which color has more luminance?</h1>
             <p>Score: {score}</p>
             <p>Tries: {tries}</p>
