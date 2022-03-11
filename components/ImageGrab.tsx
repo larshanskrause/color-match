@@ -21,14 +21,16 @@ const ImageGrab = (props) => {
     }
 
     useEffect(() => {
-        if (typeof container.current === "undefined") {
-            return
+        const { current } = container
+
+        if (typeof current !== "undefined") {
+            // @ts-ignore
+            current?.addEventListener("mousemove", handleMouseMove)
         }
-        container.current.addEventListener("mousemove", handleMouseMove)
-        return () => {
-            container.current.removeEventListener("mousemove", handleMouseMove)
-        }
-    })
+        // return () => {
+        //     container.current.removeEventListener("mousemove", handleMouseMove)
+        // }
+    }, [container.current])
 
     return (
         <div>
